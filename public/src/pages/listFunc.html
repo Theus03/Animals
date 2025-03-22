@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://notion-emojis.s3-us-west-2.amazonaws.com/v0/svg-twitter/1f993.svg" type="image/x-icon">
+    <title>Consultar - Animals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="../pages/homeFunc.html"  class="text-nav func"><li>HOME</li></a>
+                <a href="../pages/registerFunc.html" class="text-nav func"><li>CADASTRO</li></a>
+                <a href="../pages/homeFunc.html" class="logo"><li>ANIMAL</li></a>
+                <a href="../pages/listFunc.html" id="loc" class="text-nav func"><li>CONSULTAR</li></a>
+                <a href="../pages/loginFunc.html" class="text-nav func"><li>SAIR</li></a>
+            </ul>
+        </nav>    
+    </header>
+    <section class="container-title">
+        <h2 class="title-page list">INFORMAÇÕES DO ZOO</h2>
+        <div class="container-total">
+            <h4>Total de Animais: </h4>
+            <h4 class="total"> </h4>
+        </div>
+    </section>
+    <section class="container-table">
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Animal</th>
+                    <th>Espécie</th>
+                    <th>Raça</th>
+                    <th>Classe</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr></tr>
+            </tbody>
+        </table>
+    </section>
+    <div class="modal-overlay">
+        <div class="modal">
+            <h2 class="textModal">Você quer realmente <br> excluir esse animal?</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#DF525A" stroke-width="1" stroke-linecap="round"  stroke-linejoin="round" class="deleteModal"><polyline points="3 6 5 6 21 6"></polyline><path d="M19 6v14a2 2 0 0 1-2 2H7a2 2 0 0 1-2-2V6m3 0V4a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2"></path><line x1="10" y1="11" x2="10" y2="17"></line><line x1="14" y1="11" x2="14" y2="17"></line></svg>
+            <div class="group-buttons">
+                <button class="buttonCancel" onclick="closeModalDelete()">Cancelar</button>
+                <button class="buttonDelete" id="confirmDelete">Remover</button>
+            </div>
+        </div>
+    </div>
+    <div class="modal-overlay edit">
+        <div class="modal edit">
+            <h2 class="textModal">EDITAR/DETALHES</h2>
+            <form action="" id="form">
+                <div class="inputs-field">
+                    <div class="column-one">
+                        <input type="text" data-index="new" class="field-input edit" id="animal" placeholder="Animal (Ex. Leão, Macaco, Elefante)">
+                        <input type="text" class="field-input edit" id="breed" placeholder="Raça">
+                        <input type="text" class="field-input edit" id="age" placeholder="Idade">
+                        <input type="text" class="field-input edit" id="length" placeholder="Comprimento">
+                    </div>
+                    <div class="column-two">
+                        <input type="text" class="field-input edit" id="species" placeholder="Espécie">
+                        <input type="text" class="field-input edit" id="kind" placeholder="Classe">
+                        <input type="text" class="field-input edit" id="weight" placeholder="Peso">
+                        <input type="text" class="field-input edit" id="height" placeholder="Altura">
+                    </div>
+                </div>
+                <div class="group-buttons">
+                    <button class="buttonCancel" onclick="closeModalEdit()">Cancelar</button>
+                    <button class="buttonEdit" id="addAnimal" >Editar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div class="result-overlay">
+        <form id="form">
+            <div class="inputs-field">
+                <div class="column-one">
+                    <input type="text" data-index="new" class="field-input" id="animal" placeholder="Animal (Ex. Leão, Macaco, Elefante)">
+                    <input type="text" class="field-input" id="breed" placeholder="Raça">
+                    <input type="text" class="field-input" id="age" placeholder="Idade">
+                    <input type="text" class="field-input" id="length" placeholder="Comprimento">
+                </div>
+                <div class="column-two">
+                    <input type="text" class="field-input" id="species" placeholder="Espécie">
+                    <input type="text" class="field-input" id="kind" placeholder="Classe">
+                    <input type="text" class="field-input" id="weight" placeholder="Peso">
+                    <input type="text" class="field-input" id="height" placeholder="Altura">
+                </div>
+            </div>
+            <button id="addAnimal">INSERIR</button>
+        </form>
+    </div>
+    <script src="../scripts/main.js"></script>
+</body>
+</html>

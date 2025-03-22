@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="https://notion-emojis.s3-us-west-2.amazonaws.com/v0/svg-twitter/1f993.svg" type="image/x-icon">
+    <title>Cadastrar - Animals</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald&family=Ubuntu:ital,wght@0,400;0,500;0,700;1,300&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../styles/style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <ul>
+                <a href="../pages/homeFunc.html"  class="text-nav func"><li>HOME</li></a>
+                <a href="../pages/registerFunc.html" id="loc" class="text-nav func"><li>CADASTRO</li></a>
+                <a href="../pages/homeFunc.html" class="logo"><li>ANIMAL</li></a>
+                <a href="../pages/listFunc.html"  class="text-nav func"><li>CONSULTAR</li></a>
+                <a href="../pages/loginFunc.html" class="text-nav func"><li>SAIR</li></a>
+            </ul>
+        </nav>    
+    </header>
+    <main class="container-register">
+        <h2 class="title-page" >CADASTRO</h2>
+        <form id="form" action="../pages/listFunc.html">
+            <div class="inputs-field">
+                <div class="column-one">
+                    <input type="text" data-index="new" class="field-input" id="animal" placeholder="Animal (Ex. Leão, Macaco, Elefante)">
+                    <input type="text" class="field-input" id="breed" placeholder="Raça">
+                    <input type="text" class="field-input" id="age" placeholder="Idade">
+                    <input type="text" class="field-input" id="length" placeholder="Comprimento">
+                </div>
+                <div class="column-two">
+                    <input type="text" class="field-input" id="species" placeholder="Espécie">
+                    <input type="text" class="field-input" id="kind" placeholder="Classe">
+                    <input type="text" class="field-input" id="weight" placeholder="Peso">
+                    <input type="text" class="field-input" id="height" placeholder="Altura">
+                </div>
+            </div>
+            <button id="addAnimal" class="addAnimal">INSERIR</button>
+        </form>
+    </main>
+    <div class="result-overlay">
+        <h4 class="total"> </h4>
+        <table id="data-table">
+            <thead>
+                <tr>
+                    <th>Animal</th>
+                    <th>Espécie</th>
+                    <th>Raça</th>
+                    <th>Classe</th>
+                    <th>Opções</th>
+                </tr>
+            </thead>
+            <tbody>
+               <tr></tr>
+            </tbody>
+        </table>
+    </div>
+<script src="../scripts/main.js"></script>
+</body>
+</html>

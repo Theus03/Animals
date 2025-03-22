@@ -1,0 +1,751 @@
+/*================ GLOBAL ================*/
+
+:root {
+    --green: #8B9D3C;
+    --white: #fff;
+    --black: #000;
+    --gray: #403A33;
+    --red: #DF525A;
+    --blue: #0491B0;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 93.5%;
+}
+
+body {
+    background-color: var(--white);
+    overflow: auto;
+}
+
+#container-main {
+    width: min(90vw, 800px);
+    display: flex;
+}
+
+header{
+    background: var(--green);
+}
+
+#loc {
+    color: var(--white);
+    text-decoration: underline;
+}
+
+.result-overlay {
+    width: 100%;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    display: none;
+    visibility: hidden;
+    clip: rect(0, 0, 0, 0);
+}
+
+
+
+/*================ LOGIN ================*/
+
+.container-login {
+    display: flex;
+}
+
+.container-msg.user {
+    background: var(--green);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    height: 100vh;
+}
+
+.text.login-msg {
+    color: var(--white);
+    font: 500 3.8rem Ubuntu, 'sans-serif';
+    text-transform: uppercase;
+    margin-bottom: 5rem;
+}
+
+.logo {
+    color: var(--white);
+    font: 400 3rem Oswald, 'sans-serif';
+    text-decoration: none;
+}
+
+.form-login {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-inline: auto;
+}
+
+.text.login-title {
+    color: var(--black);
+    font: 400 3rem Ubuntu, 'sans-serif';
+    margin-bottom: 3.5rem;
+}
+
+.input-email, .input-username {
+    background: var(--white);
+    border: solid 3px var(--green);
+    width: 40%;
+    padding: 1rem;
+    outline: none;
+    font: 400 1rem Ubuntu, 'sans-serif';
+    margin-bottom: 3.5rem;
+}
+
+
+.input-email::placeholder {
+    font: 300 italic 1rem Ubuntu, 'sans-serif';
+}
+
+.icon-eye {
+    width: 2rem;
+    position: absolute;
+    margin-top: -2.5rem;
+    margin-left: 10rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.icon-eye.off {
+    display: none;
+}
+
+.button.login {
+    background: var(--green);
+    border: none;
+    padding: 1rem;
+    width: 25%;
+    font: 400 1.5rem Ubuntu, 'sans-serif';
+    color: var(--white);
+    cursor: pointer;
+    margin-bottom: 3.5rem;
+}
+
+.link-login {
+    font: 400 1rem Ubuntu, 'sans-serif';
+    color: var(--gray)
+}
+
+/*================ HOME ================*/
+ul{
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+    padding: 1rem;
+}
+
+.text-nav {
+    color: var(--white);
+    text-decoration: none;
+    font: 400 1.5rem Ubuntu, 'sans-serif';
+    transition: all 0.2s;
+}
+
+.text-nav.func {
+    color: #28281a;
+}
+
+.text-nav:hover {
+    padding-bottom: 0.5rem;
+    text-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+.container-home {
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    height: 86.5vh; 
+}
+
+.box-black {
+    background-color: var(--black);
+    width: 45%;
+}
+
+.box-brown {
+    background-color: #403A33;
+    width: 75%;
+}
+
+.container-slogan {
+    margin-top: 12rem;
+    z-index: 1;
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-inline: auto;
+}
+
+.container-slogan.func {
+    background: #28281a;
+    margin-top: 0rem;
+    padding: 2rem;
+    width: 100%;
+    height: 40%;
+}
+
+.text-slogan {
+    color: var(--white);
+    text-align: center;
+    font: 500 4.5rem Ubuntu, 'sans-serif';
+    text-transform: uppercase;
+    margin-bottom: 1.5rem;
+}
+
+.container-images {
+    position: absolute;
+    background-color: #28281a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 17rem;
+}
+
+.img-homeFunc{
+    width: 33.3vw;
+    height: 51.2vh;
+    filter: grayscale(100%);
+    transition: all 0.2s;
+}
+
+.img-homeFunc:hover {
+    filter: grayscale(0%);
+}
+
+
+.img-homeFunc.two {
+    height: 51.2vh;
+}
+
+.button-home {
+    background: var(--green);
+    border: none;
+    text-align: center;
+    text-decoration: none;
+    padding: 1rem;
+    width: 40%;
+    font: 400 1.5rem Ubuntu, 'sans-serif';
+    color: var(--white);
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.button-home:hover {
+    padding-left: 2rem;
+}
+
+/*================ ANIMALS ================*/
+
+.back {
+    background: #ffffff36;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    width: 5rem;
+    padding: 1rem;
+    border-radius: 0px 0px 20px 0px;
+    font: 500 1rem Ubuntu, "sans-serif";
+    color: white;
+    text-decoration: none; 
+    transition: all 0.2s;
+}
+
+.back:hover {
+    padding: 1.2rem;
+    border-radius: 0px 0px 15px 0px;
+}
+
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+}
+
+.left-slide {
+    height: 100vh;
+    width: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform .5s ease-in-out;
+}
+
+.div {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content:center;
+    padding-left: 5rem;
+}
+
+.title-animal {
+    font: 400 3rem Ubuntu, 'sans-serif';
+    color: var(--white);
+    margin-bottom: 5rem;
+}
+
+.text-animal {
+    font: 400 1.3rem Ubuntu, 'sans-serif';
+    color: var(--white);
+    width: 80%;
+    text-align: left;
+}
+
+.right-slide {
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    transition: transform .5s ease-in-out;
+}
+
+.right-slide > div {
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 100%;
+    width: 100%;
+}
+
+.down-button svg, .up-button svg {
+    width: 3rem;
+    border: none;
+}
+
+
+.slider-container .action-buttons .down-button {
+    transform: translateX(-100%);
+}
+
+.slider-container .action-buttons .up-button {
+    transform: translateY(-100%);
+}
+
+.action-buttons button {
+    position: absolute;
+    left: 50%;
+    top: 30%;
+    z-index: 100;
+    background-color: var(--white);
+    border: none;
+    color: #403A33;
+    outline: none;
+    cursor: pointer;
+}
+
+.down-button {
+    transform:  translateX(-100%);
+}
+
+.up-button {
+    transform:  translateY(-100%);
+}
+
+
+/*================ REGISTER ================*/
+.title-page {
+    text-align: center;
+    font: 400 2.5rem Ubuntu, 'sans-serif';
+    padding-top: 3rem;
+}
+
+.inputs-field {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+}
+
+.column-one, .column-two{
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+}
+
+.field-input {
+    font: 400 1rem Ubuntu, 'sans-serif';
+    width: 28rem;
+    padding: 1rem;
+    margin: 0.8rem;
+    border: solid 3px var(--green);
+    outline: none;
+    transition: all 0.2s;
+}
+
+.field-input::placeholder {
+    font: italic 1.2rem Ubuntu, 'sans-serif';
+}
+
+.field-input:focus {
+    transform: scale(1.03);
+}
+
+.addAnimal {
+    background: var(--green);
+    display: flex;
+    justify-content: center;
+    margin-inline: auto;
+    padding: 1rem;
+    width: 15%;
+    font: 400 1.5rem Ubuntu, 'sans-serif';
+    color: var(--white);
+    border: none;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.addAnimal:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+/*================ LIST ================*/
+
+.container-title {
+    margin: 4rem;
+    width: 65vw;
+    display: flex;
+    margin-inline: auto;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-total {
+    display: flex;
+}
+
+.title-page.list {
+    padding-top: 0rem;
+}
+
+.container-total h4 {
+    font: 800 1.3rem Ubuntu, 'sans-serif';
+    text-transform: uppercase;
+    margin-left: 0.5rem;
+}
+
+.container-table {
+    width: min(85vw, 1000px);
+    overflow: auto;
+    margin-inline: auto;
+}
+
+#data-table {
+    width: 100%;
+    text-align: center;
+    border-spacing: 0rem 1.5rem;
+    overflow: auto;
+}
+
+thead tr th {
+    background: var(--green);
+    padding: 1.5rem;
+    color: var(--white);
+    font: 800 1.2rem Ubuntu, 'sans-serif';
+}
+
+tbody tr td{
+    background-color: #E5E5E5;  
+    padding: 1.5rem;
+    color: var(--black);
+    font: 400 1.2rem Ubuntu, 'sans-serif';
+}
+
+hr{
+    background-color: #c4c4c4;
+    border: solid 1px #c4c4c4;
+    visibility: hidden;
+    margin: 0.1rem;
+}
+
+tbody tr td a {
+    text-transform: uppercase;
+    text-decoration: underline;
+    cursor: pointer;
+    color: var(--black);
+    font: 400 0.9rem Ubuntu, 'sans-serif';
+    transition: all 0.2s;
+}
+
+.link-edit:hover {
+    color: var(--blue);
+}
+
+.link-delete:hover {
+    color: var(--red);
+}
+
+/*================ MODAL ================*/
+.modal-overlay {
+    background: rgba(0, 0, 0, 0.550);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    opacity: 0;
+    display: none;
+}
+
+.modal-overlay.edit {
+    background: rgba(0, 0, 0, 0.550);
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    opacity: 100;
+}
+
+.modal-overlay.active, .modal-overlay.edit.active {
+    opacity: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.modal {
+    background: var(--white);
+    padding: 1rem;
+    width: 40%;
+    height: 55%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: solid 3px var(--red);
+}
+
+.modal.edit {
+    padding: 2rem;
+    width: 70%;
+    height: 85%;
+    border: solid 3px var(--blue);
+}
+
+.textModal {
+    font: 500 2rem Ubuntu, 'sans-serif';
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.field-input.edit {
+    border: solid 3px var(--blue);
+}
+
+.deleteModal {
+    width: 8rem;
+    margin: 2rem;
+}
+
+.group-buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.group-buttons button {
+    padding: 1rem;
+    width: 30%;
+    margin: 0.5rem;
+    border: none;
+    font: 400 1.5rem Ubuntu, 'sans-serif';
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.buttonCancel {
+    background: #DBDBDB;
+    color: var(--black);
+}
+
+.buttonDelete {
+    background: var(--red);
+    color: var(--white);
+}
+
+.buttonEdit {
+    background: var(--blue);
+    color: var(--white);
+}
+
+.group-buttons button:hover {
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+/*================ RESPONSIVE ================*/
+
+@media (max-width: 800px ) {
+
+    /*================ GLOBAL ================*/
+    html {
+        font-size: 85.75%;
+    }
+
+    /*================ LOGIN ================*/
+    .container-msg.user {
+        display: none;
+    }
+    .form-login{
+        width: 100%;
+        padding-top: 3rem;
+    }
+    .input-email {
+        width: 80%;
+    }
+    .icon-eye {
+        margin-left: 3rem;
+        width: 1.5rem;
+    }
+    .button.login  {
+        width: 50%;
+    }
+
+    /*================ HOME ================*/
+
+    .text-nav{
+        font-size: 1rem;
+    }
+
+    .logo {
+        font-size: 1.8rem;
+    }
+    
+    .text-nav.func {
+        font-size: 0.8rem;
+    }
+
+    .text-slogan {
+        font-size: 2.5rem;
+    }
+        
+    .container-slogan {
+        margin-top: 6rem;
+    }
+
+    .container-images{
+        flex-direction: column;
+    }
+
+    
+    .img-homeFunc{
+        width: 100vw;
+        height: 50vh;
+    }
+
+    /*================ ANIMALS ================*/
+    
+    .div{
+        padding-left: 1rem;
+    }
+    .title-animal{
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+    }
+    .text-animal{
+        font-size: 0.6rem;
+        width: 70%;
+        margin-bottom: 15rem;
+    }
+    
+    /*================ REGISTER ================*/
+    .container-register {
+        height: 120vh;
+    }
+    .title-page {
+        text-align: center;
+        font: 400 2rem Ubuntu, 'sans-serif';
+        margin: 1rem;
+    }
+    .inputs-field {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 1rem;
+    }
+    .field-input {
+        width: 15rem;
+    }
+
+    #addAnimal{
+        padding: 1rem;
+        width: 35%;
+        font: 400 1.5rem Ubuntu, 'sans-serif';
+        margin-bottom: 3rem;
+    }
+
+    /*================ LIST ================*/
+    .container-title {
+        margin: 1rem;
+        width: 90vw;
+        flex-direction: column;
+    }
+    .container-total h4 {
+        font: 800 1rem Ubuntu, 'sans-serif';
+        text-transform: uppercase;
+        margin-left: 0.5rem;
+    }
+
+    /*================ MODAL ================*/
+    .modal{
+        width: 100%;
+    }
+    .textModal {
+        font-size: 1.3rem;
+    }
+    .deleteModal {
+        width: 5rem;
+    }
+    .group-buttons button {
+        width: 35%;
+        font-size: 1rem;
+    }
+}
+
+@media (width: 1024px) {
+    /*================ GLOBAL ================*/
+    html {
+        font-size: 85.75%;
+    }
+
+    /*================ LOGIN ================*/
+    .container-msg.user {
+        display: none;
+    }
+    .form-login{
+        width: 100%;
+        padding-top: 3rem;
+    }
+    .input-email {
+        width: 70%;
+    }
+    .button.login  {
+        width: 50%;
+    }
+
+    /*================ MODAL ================*/
+   .modal{
+       margin-bottom: 40rem;
+       height: 30%;
+   }
+}
